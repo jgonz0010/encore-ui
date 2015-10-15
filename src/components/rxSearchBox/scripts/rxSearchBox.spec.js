@@ -12,32 +12,36 @@ describe('rxSearchBox', function () {
     });
 
     describe('simple invokation', function () {
-        beforeEach(function () {
-            template = '<rx-search-box ng-model="testModel"></rx-search-box>';
-            rootScope.testModel = '';
-            el = helpers.createDirective(template, compile, rootScope);
-            scope = el.isolateScope();
-        });
+        template = '<rx-search-box ng-model="testModel"></rx-search-box>';
 
-        it('should have same searchVal as testModel', function () {
-            expect(scope.searchVal).to.eq(rootScope.testModel);
-        });
+        describe('given an empty rootScope.testMode', function () {
+            beforeEach(function () {
+                rootScope.testModel = '';
+                el = helpers.createDirective(template, compile, rootScope);
+                scope = el.isolateScope();
+            });
 
-        it('should not be clearable', function () {
-            expect(scope.isClearable).to.be.false;
-        });
+            it('should have same searchVal as testModel', function () {
+                expect(scope.searchVal).to.eq(rootScope.testModel);
+            });
 
-        it('should have default placeholder', function () {
-            expect(scope.rxPlaceholder).to.eq('Search...');
+            it('should not be clearable', function () {
+                expect(scope.isClearable).to.be.false;
+            });
+
+            it('should have default placeholder', function () {
+                expect(scope.rxPlaceholder).to.eq('Search...');
+            });
         });
 
         describe('given a non-empty rootScope.testModel', function () {
             beforeEach(function () {
                 rootScope.testModel = 'hiyoo';
-                scope.$digest();
+                el = helpers.createDirective(template, compile, rootScope);
+                scope = el.isolateScope();
             });
 
-            it('should not be clearable', function () {
+            it('should be clearable', function () {
                 expect(scope.isClearable).to.be.true;
             });
 
