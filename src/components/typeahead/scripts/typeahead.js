@@ -7,7 +7,7 @@ angular.module('encore.ui.typeahead')
 
         typeahead.compile = function () {
             return function (scope, element, attrs, ctrls) {
-                var ngModelCtrl = ctrls[0];
+                var ngModelCtrl = ctrls[0]; // won't work in 1.2 (not backward compatible)
                 link.apply(this, arguments);
 
                 if (/allowEmpty/.test(attrs.typeahead)) {
@@ -28,6 +28,8 @@ angular.module('encore.ui.typeahead')
 
                     element.on('click', function () {
                         scope.$apply(function () {
+                            // quick change to null and back to trigger parsers
+                            ngModelCtrl.$setViewValue(null);
                             ngModelCtrl.$setViewValue(ngModelCtrl.$viewValue);
                         });
                     });
