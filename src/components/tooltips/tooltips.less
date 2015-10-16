@@ -1,137 +1,98 @@
-@import "vars";
+@import 'vars';
 
-//
-// Tooltips
-// --------------------------------------------------
-
-@zindexTooltip: 1070;
-@tooltipMaxWidth: 200px;
-@tooltipHeaderColor: @white;
-@tooltipColor: @white;
-@tooltipBg: @gray-700;
-@tooltipOpacity: 1;
-
-//** Tooltip arrow width
-@tooltipArrowWidth: 5px;
-//** Tooltip arrow color
-@tooltipArrowColor: @tooltipBg;
-
-// Base class
 .tooltip {
   position: absolute;
-  z-index: @zindexTooltip;
   display: block;
+  z-index: @tooltip-z-index;
   visibility: visible;
-  font-size: @appFontSize;
-  line-height: @appLineHeight;
+  font-size: @tooltip-font-size;
+  line-height: @tooltip-line-height;
   .opacity(0);
+  padding: 0;
+
+  .tooltip-inner {
+    max-width: @tooltip-max-width;
+    color: @tooltip-color;
+    background-color: @tooltip-background-color;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 1px 1px 4px 0px;
+    padding: 1em;
+    .border-radius(4px);
+
+    .tooltip-header {
+      color: @tooltip-header-color;
+      text-align: left;
+      font-size: 15px;
+      padding-bottom: 5px;
+      font-weight: 600;
+    }//.tooltip-header
+  }//.tooltip-inner
+
+  .tooltip-arrow {
+    position: absolute;
+    box-sizing: border-box;
+    width: @tooltip-arrow-width; // 0;
+    height: @tooltip-arrow-width; // 0;
+    border-width: @tooltip-arrow-width;
+    border-color: transparent;
+    border-style: solid;
+    text-shadow: rgba(0, 0, 0, 0.09) 1px 1px 1px;
+  }
 
   &.in {
-    .opacity(@tooltipOpacity);
+    .opacity(@tooltip-opacity);
   }
 
   &.top {
-    margin-top: -3px;
-    padding: @tooltipArrowWidth 0;
-  }
+    margin-top: -@tooltip-arrow-width;
+    padding-bottom: @tooltip-arrow-width / 2;
 
-  &.right {
-    margin-left: 3px;
-    padding: 0 @tooltipArrowWidth;
-  }
+    .tooltip-arrow {
+      bottom: 0;
+      left: 50%;
+      margin-left: -@tooltip-arrow-width;
+      border-bottom-width: 0;
+      border-top-color: @tooltip-arrow-color;
+    }//.tooltip-arrow
+  }//&.top
 
   &.bottom {
-    margin-top: 3px;
-    padding: @tooltipArrowWidth 0;
-  }
+    margin-bottom: -@tooltip-arrow-width;
+    padding-top: @tooltip-arrow-width;
+
+    .tooltip-arrow {
+      top: 0;
+      left: 50%;
+      margin-left: -@tooltip-arrow-width;
+      border-top-width: 0;
+      border-bottom-color: @tooltip-arrow-color;
+    }//.tooltip-arrow
+  }//&.bottom
 
   &.left {
-    margin-left: -3px;
-    padding: 0 @tooltipArrowWidth;
-  }
-}
+    margin-left: -@tooltip-arrow-width;
+    padding-right: @tooltip-arrow-width;
 
-// Wrapper for the tooltip content
-.tooltip-inner {
-  max-width: @tooltipMaxWidth;
-  color: @tooltipColor;
-  text-align: center;
-  text-decoration: none;
-  background-color: @tooltipBg;
-  .border-radius(4px);
-  box-shadow: rgba(0, 0, 0, 0.35) 1px 1px 4px 0px;
-  padding: 1em;
+    .tooltip-arrow {
+      top: 50%;
+      right: 0;
+      margin-top: -@tooltip-arrow-width;
+      border-right-width: 0;
+      border-left-color: @tooltip-arrow-color;
+    }//.tooltip-arrow
+  }//.left
 
-  .tooltip-header {
-    color: @tooltipHeaderColor;
-    text-align: left;
-    font-size: 15px;
-    padding-bottom: 5px;
-    font-weight: 600;
-  }
-}
+  &.right {
+    margin-right: -@tooltip-arrow-width;
+    padding-left: @tooltip-arrow-width;
 
-// Arrows
-.tooltip-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  text-shadow: rgba(0, 0, 0, 0.09) 1px 1px 1px;
-}
-
-.tooltip {
-  &.top .tooltip-arrow {
-    bottom: 0;
-    left: 50%;
-    margin-left: -@tooltipArrowWidth;
-    border-width: @tooltipArrowWidth @tooltipArrowWidth 0;
-    border-top-color: @tooltipArrowColor;
-  }
-  &.top-left .tooltip-arrow {
-    bottom: 0;
-    left: @tooltipArrowWidth;
-    border-width: @tooltipArrowWidth @tooltipArrowWidth 0;
-    border-top-color: @tooltipArrowColor;
-  }
-  &.top-right .tooltip-arrow {
-    bottom: 0;
-    right: @tooltipArrowWidth;
-    border-width: @tooltipArrowWidth @tooltipArrowWidth 0;
-    border-top-color: @tooltipArrowColor;
-  }
-  &.right .tooltip-arrow {
-    top: 50%;
-    left: 0;
-    margin-top: -@tooltipArrowWidth;
-    border-width: @tooltipArrowWidth @tooltipArrowWidth @tooltipArrowWidth 0;
-    border-right-color: @tooltipArrowColor;
-  }
-  &.left .tooltip-arrow {
-    top: 50%;
-    right: 0;
-    margin-top: -@tooltipArrowWidth;
-    border-width: @tooltipArrowWidth 0 @tooltipArrowWidth @tooltipArrowWidth;
-    border-left-color: @tooltipArrowColor;
-  }
-  &.bottom .tooltip-arrow {
-    top: 0;
-    left: 50%;
-    margin-left: -@tooltipArrowWidth;
-    border-width: 0 @tooltipArrowWidth @tooltipArrowWidth;
-    border-bottom-color: @tooltipArrowColor;
-  }
-  &.bottom-left .tooltip-arrow {
-    top: 0;
-    left: @tooltipArrowWidth;
-    border-width: 0 @tooltipArrowWidth @tooltipArrowWidth;
-    border-bottom-color: @tooltipArrowColor;
-  }
-  &.bottom-right .tooltip-arrow {
-    top: 0;
-    right: @tooltipArrowWidth;
-    border-width: 0 @tooltipArrowWidth @tooltipArrowWidth;
-    border-bottom-color: @tooltipArrowColor;
-  }
-}
+    .tooltip-arrow {
+      top: 50%;
+      left: 0;
+      margin-top: -@tooltip-arrow-width;
+      border-left-width: 0;
+      border-right-color: @tooltip-arrow-color;
+    }
+  }//&.right
+}//.tooltip
