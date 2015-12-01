@@ -30,9 +30,9 @@ thead th[rx-bulk-select-header-check] {
   height: 0;
   & > i {
     cursor: pointer;
-    color: @subduedText;
+    color: @gray-700;
     &:hover {
-      color: @subduedTextHover;
+      color: @gray-800;
     }
   }
 }
@@ -84,7 +84,7 @@ thead th[rx-bulk-select-header-check] {
 
 .selected td:not(.status) {
   background: @tableRowSelected;
-  border-color: #bad4bb;
+  border-color: @green-100;
   // this 'double' makes it so that the border-color applies to the top border as well
   // @see http://stackoverflow.com/questions/7942212/css-table-row-border-color-with-border-collapse
   border-style: double;

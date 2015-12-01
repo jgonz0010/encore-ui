@@ -76,17 +76,16 @@
 @preprodActiveBackground: #d41f26;
 
 // ## Tables
-@tableHeaderBg: #878787;
+@tableHeaderBg: @gray-200;
 @tableBg: @white;
-@tableBgAlt: #f2f2f2;
-@tableRowSelected: #c6e4c8;
-@tableBorder: #e1e0df;
-@tableHeaderBorder: #6e6e6e;
-@subtableBorder: #adadad;
-@tableHeaderText: @white;
-@tableCellText: #555555;
+@tableBgAlt: @gray-25;
+@tableRowSelected: fade(@green-100, 30%);
+@tableBorder: @gray-200;
+@tableHeaderBorder: @gray-400;
+@subtableBorder: @gray-500;
+@tableHeaderText: @gray-900;
+@tableCellText: @gray-800;
 @tableCellPadding: 5px 10px;
-
 
 /* ======================================== *\
    COMPONENT VARIABLES
@@ -357,3 +356,8 @@
 @inputColorError: @red; // replaced by @rxForm-error-text-color
 @inputBackgroundError: @inputColorError; // replaced by @rxForm-error-accent-color
 @rxCheckbox-color-selected: @white; // not used, replaced by @rxForm-input-background-color
+
+/*
+ * rxPaginate
+ */
+@paginationColor: @gray-700;

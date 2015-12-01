@@ -7,7 +7,7 @@
   // we also want a semi-consistent width, but not too wide for modals
   min-width: 39em;
 
-  td:not(.empty-data) {
+  td:not(.empty-message) {
     // remove default padding from td's so that we can make the label take up the full room
     padding: 0;
   }
@@ -44,7 +44,7 @@
   .disabled {
     label {
       cursor: default;
-      color: @inputColorDisabled;
+      color: @gray-600;
     }
   }
   .option-table-input {
@@ -52,13 +52,13 @@
     line-height: 0;
   }
   .current td {
-    color: #3ab661;
+    color: @green-700;
   }
   // @note KL: I'd like to stick with just adding the background to the <tr>, but
   // we need to make the selector more specific to override the table-stripe styles.
   .selected td {
     background: @tableRowSelected;
-    border-color: #bad4bb;
+    border-color: @green-100;
     // this 'double' makes it so that the border-color applies to the top border as well
     // @see http://stackoverflow.com/questions/7942212/css-table-row-border-color-with-border-collapse
     border-style: double;

@@ -1,7 +1,6 @@
 /*
  * rxPaginate
  */
-@paginationColor: #ababab;
 
 .paginate-area {
   text-align: center;
@@ -46,7 +45,7 @@
   .pagination > li:first-child > a,
   .pagination > li:first-child > span {
     padding-left: 30px;
-    color: @infoBlue;
+    color: @blue-700;
     background: transparent;
     &:before {
       content: ".";
@@ -56,7 +55,7 @@
       display: block;
       position: absolute;
       border: 6px solid transparent;
-      border-bottom-color: @infoBlue;
+      border-bottom-color: @blue-700;
       border-top: 0;
       left: 10px;
       top: 55%;
@@ -94,7 +93,7 @@
       padding: 0;
       border: 0;
       background: transparent;
-      color: @infoBlue;
+      color: @blue-700;
     }
     span {
       float: none;
@@ -114,7 +113,8 @@
   .pagination > .page-links > li > span:hover,
   .pagination > .page-links > li > a:focus,
   .pagination > .page-links > li > span:focus {
-    background: #eeeeee;
+    border-top: 2px solid @gray-300;
+
   }
 
   .pagination > .page-links > .active > a,
@@ -158,7 +158,7 @@
   left: -1px;
   width: ~"calc(100% + 2px)";
   height: ~"calc(100% + 2px)";
-  background: rgba(222, 222, 221, 0.8);
+  background: rgba(250, 250, 250, 0.8); // == @gray-25 at 80%
   .loading-text-wrapper {
     width: 100px;
     margin: 20% auto;
@@ -167,11 +167,11 @@
     font-size: 18px;
     margin-top: 15%;
     text-align: center;
-    color: #777777;
+    color: @gray-700;
   }
   i {
     font-size: 30px;
     margin-left: 25px;
-    color: #777777;
+    color: @gray-700;
   }
 }

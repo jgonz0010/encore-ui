@@ -1,7 +1,7 @@
 /*
  * Common
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,700,700italic");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,100italic,300,300italic,400italic,700,700italic");
 @import "vars";
 @import (inline) "normalize.css";
@@ -90,6 +90,7 @@ table {
   }
   thead th {
     text-align: left;
+    font-weight: 500;
     background: @tableHeaderBg;
     color: @tableHeaderText;
     border: 1px solid @tableHeaderBorder;
@@ -113,19 +114,23 @@ table {
       cursor: pointer;
       &::after {
         display: inline-block;
-        color: @subduedText;
+        color: @gray-700;
         font-size: 20px;
         .chevron-mixin;
       }
     }
   }
   td.expanded {
-    background-color: @subtableBorder;
-    border-bottom-color: @subtableBorder;
+    background-color: @tableHeaderBg;
+    border-bottom-color: @tableHeaderBg;
     .double-chevron::after {
       color: @white;
       .chevron-mixin(-1);
     }
+  }
+  .fa-times.delete-x {
+    color: @gray-700;
+    cursor: pointer;
   }
   .fa-times.delete-x:hover {
     color: saturate(@red-700, 15%);
@@ -134,8 +139,8 @@ table {
 }
 
 .expanded-container {
-  padding: 0 3px 3px 3px;
-  background-color: @subtableBorder;
+  padding: 0 3px 20px 3px;
+  background-color: @tableHeaderBg;
 
   & > * {
     margin-left: 2%;
@@ -154,8 +159,9 @@ table {
     }
 
     th {
-      border-color: darken(@subtableBorder, 15%);
-      background-color: @subtableBorder;
+      border-color: @tableHeaderBorder;
+      background-color: @tableHeaderBg;
+      color: @tableHeaderText;
       border-top: 0;
       border-bottom: 0;
     }
