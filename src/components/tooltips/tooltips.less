@@ -1,21 +1,5 @@
 @import "vars";
 
-//
-// Tooltips
-// --------------------------------------------------
-
-@zindexTooltip: 1070;
-@tooltipMaxWidth: 200px;
-@tooltipHeaderColor: @white;
-@tooltipColor: @white;
-@tooltipBg: @gray-700;
-@tooltipOpacity: 1;
-
-//** Tooltip arrow width
-@tooltipArrowWidth: 5px;
-//** Tooltip arrow color
-@tooltipArrowColor: @tooltipBg;
-
 // Base class
 .tooltip {
   position: absolute;
@@ -53,6 +37,7 @@
 
 // Wrapper for the tooltip content
 .tooltip-inner {
+  border: 1px solid @gray-600;
   max-width: @tooltipMaxWidth;
   color: @tooltipColor;
   text-align: center;
