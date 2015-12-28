@@ -15,7 +15,7 @@ angular.module('encore.ui.rxPaginate')
 
         return {
             first: first,
-            last: last,
+            last: last
         };
 
     };

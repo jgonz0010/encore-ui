@@ -270,7 +270,7 @@ describe('encore.ui.rxApp', function () {
                 children: [
                     {
                         'href': '/app',
-                        'linkText': 'App',
+                        'linkText': 'App'
                     }
                 ]
             }];

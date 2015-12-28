@@ -19,7 +19,7 @@ angular.module('encore.ui.rxApp')
         beta: {
             class: 'beta-status',
             text: 'Beta'
-        },
+        }
     };
     // Takes an object with `key`, `text` and `class` attributes,
     // and adds it to to the existing set of status values

@@ -47,7 +47,7 @@ angular.module('encore.ui.rxMultiSelect')
         require: ['rxMultiSelect', 'ngModel'],
         scope: {
             selected: '=ngModel',
-            options: '=?',
+            options: '=?'
         },
         controller: function ($scope) {
             if (_.isUndefined($scope.selected)) {

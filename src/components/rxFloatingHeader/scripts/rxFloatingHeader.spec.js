@@ -45,7 +45,7 @@ describe('rxFloatingHeader', function () {
             setShouldFloat: function (val) { shouldFloat = val; },
             setHeight: function (val) { height = val; },
             setWidth: function (val) { width = val; },
-            setScrollTop: function (val) { scrollTop = val; },
+            setScrollTop: function (val) { scrollTop = val; }
         };
     };
 

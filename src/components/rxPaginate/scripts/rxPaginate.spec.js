@@ -257,7 +257,7 @@ describe('Pagination', function () {
                 { name: 'Some Name2', os: 'Some OS2' },
                 { name: 'Some Name3', os: 'Some OS3' },
                 { name: 'Some Name4', os: 'Some OS4' },
-                { name: 'Some Name5', os: 'Some OS5' },
+                { name: 'Some Name5', os: 'Some OS5' }
 
             ],
             totalNumberOfItems: 5,

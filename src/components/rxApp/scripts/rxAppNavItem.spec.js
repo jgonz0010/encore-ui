@@ -80,7 +80,7 @@ describe('encore.ui.rxApp', function () {
                 access: {
                     token:
                         {
-                            id: 'someid',
+                            id: 'someid'
                         },
                         user: {
                             id: 'joe.customer',

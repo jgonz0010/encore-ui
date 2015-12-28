@@ -47,7 +47,7 @@ exports.rxMetadata = function (options) {
 
     options = _.defaults(options, {
         present: true,
-        visible: true,
+        visible: true
     });
 
     return function () {

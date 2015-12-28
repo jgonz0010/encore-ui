@@ -107,7 +107,7 @@ describe('rxSelect', function () {
                 'Thin (light and crispy)',
                 'Medium (perfect balance of flavor)',
                 'Thick (borderline jerky)',
-                'Crumbled (great on salads)',
+                'Crumbled (great on salads)'
             ];
             expect(subject.options).to.eventually.eql(opts);
         });

@@ -39,6 +39,6 @@ angular.module('encore.ui.rxButton')
             toggle: '=',
             disable: '=?',
             classes: '@?'
-        },
+        }
     };
 });

@@ -14,7 +14,7 @@ var rowFromElement = function (rowElement) {
             get: function () {
                 return rowElement.element(by.binding('os')).getText();
             }
-        },
+        }
     });
 };
 

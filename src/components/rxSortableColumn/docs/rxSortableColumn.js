@@ -32,6 +32,6 @@ angular.module('demoApp')
         {
             name: 'Kerry Bowley',
             jobTitle: 'Dev Mom'
-        },
+        }
     ];
 });

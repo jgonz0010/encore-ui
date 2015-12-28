@@ -8,7 +8,7 @@ describe('service:UnauthorizedInterceptor', function () {
             'fullPath': '/app/path',
             'fullPathParams': '/app/path?search=term',
             'login': '/', // /login is an actual app, so the interceptor never kicks in
-            'root': '/', // / may not need to be authorized, but in case it is, redirect will be /
+            'root': '/' // / may not need to be authorized, but in case it is, redirect will be /
         },
         q = { reject: sinon.spy() };
 

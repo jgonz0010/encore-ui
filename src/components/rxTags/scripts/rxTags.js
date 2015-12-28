@@ -52,7 +52,7 @@ angular.module('encore.ui.rxTags')
         restrict: 'E',
         require: 'ngModel',
         scope: {
-            options: '=',
+            options: '='
         },
         link: function (scope, element, attrs, ngModelCtrl) {
             var container = rxDOMHelper.find(element, '.rx-tags')[0];

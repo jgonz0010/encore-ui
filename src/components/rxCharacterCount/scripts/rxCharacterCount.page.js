@@ -21,7 +21,7 @@ var rxCharacterCount = {
     txtComment: {
         get: function () {
             return this.rootElement;
-        },
+        }
     },
 
     /**

@@ -403,7 +403,7 @@ angular.module('encore.ui.rxMisc')
     StorageAPI.prototype.getAll = function () {
         return this.storage.getObject(this.key) || {
             pageConfig: {
-                version: version,
+                version: version
             },
             forms: {
             }

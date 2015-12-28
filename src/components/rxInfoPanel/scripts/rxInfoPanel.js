@@ -21,7 +21,7 @@ angular.module('encore.ui.rxInfoPanel')
         restrict: 'E',
         transclude: true,
         scope: {
-            panelTitle: '@',
+            panelTitle: '@'
         }
     };
 });

@@ -6,7 +6,7 @@ describe('rxPermission', function () {
         mockToken = {
             access: {
                 token: {
-                        id: 'someid',
+                        id: 'someid'
                 },
                 user: {
                     id: 'joe.customer',

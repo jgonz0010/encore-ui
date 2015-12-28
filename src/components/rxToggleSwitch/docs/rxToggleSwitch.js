@@ -33,7 +33,7 @@ angular.module('demoApp')
             $scope.loading5 = false;
             rxNotify.clear('page');
             rxNotify.add('Asynchronous operation failed', {
-                type: 'error',
+                type: 'error'
             });
             
             // Reset toggle switch to original value to simulate failed async operation

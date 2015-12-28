@@ -49,7 +49,7 @@ angular.module('encore.ui.rxBulkSelect')
                 var oldVal = dst[sourceName];
                 dst[sourceName] = newVal;
                 notify(newVal, oldVal);
-            },
+            }
         });
         return function register (fn) {
             listeners.push(fn);

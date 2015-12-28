@@ -25,7 +25,7 @@ exports.rxCollapse = function (options) {
 
     options = _.defaults(options, {
         title: undefined,
-        expanded: false,
+        expanded: false
     });
 
     return function () {

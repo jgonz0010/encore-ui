@@ -10,5 +10,5 @@ angular.module('encore.ui.rxStatusColumn')
 .value('rxStatusColumnIcons', {
     'ERROR': 'fa-ban',
     'WARNING': 'fa-exclamation-triangle',
-    'INFO': 'fa-info-circle',
+    'INFO': 'fa-info-circle'
 });

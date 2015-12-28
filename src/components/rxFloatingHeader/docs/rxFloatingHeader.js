@@ -24,7 +24,7 @@ angular.module('demoApp')
         { name: 'I', value: 4 },
         { name: 'J', value: 5 },
         { name: 'K', value: 1 },
-        { name: 'L', value: 2 },
+        { name: 'L', value: 2 }
     ];
 
     $scope.clearFilter = function () {

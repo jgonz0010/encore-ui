@@ -26,7 +26,7 @@ var rxInfoPanel = {
                 }
             });
         }
-    },
+    }
 };
 
 exports.rxInfoPanel = {

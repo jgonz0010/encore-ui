@@ -249,6 +249,6 @@ angular.module('encore.ui.rxFloatingHeader')
             scope.update = function () {
                 setup();
             };
-        },
+        }
     };
 });

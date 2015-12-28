@@ -13,12 +13,12 @@ describe('rxAppRoutes', function () {
                     children: [
                         {
                             linkText: '1st-1st-1st',
-                            key: 'firstChildChild',
+                            key: 'firstChildChild'
                         }
                     ]
                 }, {
                     href: '/1-2',
-                    key: 'secondChild',
+                    key: 'secondChild'
                 }
             ]
         }, {

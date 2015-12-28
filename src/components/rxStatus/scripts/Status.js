@@ -223,7 +223,7 @@ angular.module('encore.ui.rxStatus')
                 loading: false,
                 prop: 'loaded'
             };
-        },
+        }
     };
 
     // States that specify a type cannot be dismissed (have to be approved by user)
